@@ -1,6 +1,7 @@
-import React, {useSate} from "react";
+import React, { useSate } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   Const [weatherData, setWeatherData] = useSate({ready: false});
@@ -41,7 +42,7 @@ export default function Weather(props) {
       </form>
       <h1>{weather.data.city}</h1>
       <ul>
-        <li>{weatherData.date}</li>
+        <li><FormattedDate date={weatherData.date}/></li>
         <li className="text-capitalize">{weather.data.description}</li>
       </ul>
       <div className="row mt-3">
@@ -68,10 +69,10 @@ export default function Weather(props) {
   );
     } else {
         
-    let apiKey = `e84830669835db80ec691f78d61d1107`;
+    const apiKey = `e84830669835db80ec691f78d61d1107`;
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.deafaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading"
+    return "Loading";
     }
 
 }
