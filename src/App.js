@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div lcassName="container">
         <h1> Weather App </h1>
-        <Weather />
+        <Weather defaultCity="Tokyo" />
         <footer>
           {" "}
           Created by Nou Vang and is{" "}
