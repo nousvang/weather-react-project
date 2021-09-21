@@ -4,6 +4,19 @@
   border-radius: 4px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(135, 135, 135);
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.Weather .btn-primary {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  border: #fcb69f;
+  border-radius: 4px;
+  padding: 7px;
+}
+
+.Weather .form-control {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  border: #ee9d82;
 }
 
 .Weather h1 {
@@ -37,11 +50,11 @@
   display: inline-block;
 }
 
-.Weather .temperature {
+.WeatherTemperature .temperature {
   font-weight: bold;
-  font: 64px;
+  font: 32px;
   line-height: 64px;
-  font-weight: 400;
+  font-weight: 600;
   color: rgb(33, 33, 33);
 }
 
